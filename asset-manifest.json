@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/your-repo-name/static/css/main.fe9e33b0.css",
+    "main.js": "/your-repo-name/static/js/main.1b7a48bd.js",
+    "static/media/splash-background.png": "/your-repo-name/static/media/splash-background.aa8c98921160c56877d0.png",
+    "static/media/Don_Croakleone.png": "/your-repo-name/static/media/Don_Croakleone.47cd15e1a9786e8593f4.png",
+    "static/media/logoplaceholder.png": "/your-repo-name/static/media/logoplaceholder.0112b23cd9e59ee4c54e.png",
+    "index.html": "/your-repo-name/index.html",
+    "main.fe9e33b0.css.map": "/your-repo-name/static/css/main.fe9e33b0.css.map",
+    "main.1b7a48bd.js.map": "/your-repo-name/static/js/main.1b7a48bd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe9e33b0.css",
+    "static/js/main.1b7a48bd.js"
+  ]
+}
