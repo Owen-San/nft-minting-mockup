@@ -246,10 +246,9 @@ nav {
   width: 300px;
   margin: 2rem auto;
   display: block;
-  border-radius: 16px;
-  box-shadow: 0 0 30px rgba(187, 134, 252, 0.6),
-    0 0 60px rgba(152, 94, 255, 0.3);
   animation: float 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(187, 134, 252, 0.5))
+    drop-shadow(0 0 30px rgba(152, 94, 255, 0.3));
 }
 
 @keyframes float {
