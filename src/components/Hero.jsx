@@ -71,7 +71,7 @@ export default function Hero() {
             style={{
               left: `${Math.random() * 100}%`,
               animationDuration: `${Math.random() * 1 + 0.4}s`,
-              opacity: Math.random() * 0.3 + 0.1,
+              opacity: Math.random() * 0.5 + 0.3,
               height: `${Math.random() * 40 + 30}px`,
             }}
           ></div>
