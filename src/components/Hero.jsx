@@ -15,9 +15,11 @@ export default function Hero() {
       const scrollingDown = window.scrollY > lastScrollY;
       const nearFooter = footerTop < window.innerHeight;
 
-      if (scrollingDown && nearFooter) {
+      if (window.scrollY === 0) {
+        setShowNav(true);
+      } else if (scrollingDown && nearFooter) {
         setShowNav(false);
-      } else if (!nearFooter) {
+      } else {
         setShowNav(true);
       }
 
