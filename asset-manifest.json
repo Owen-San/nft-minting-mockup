@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/nft-minting-mockup/static/css/main.80c76cc7.css",
-    "main.js": "/nft-minting-mockup/static/js/main.74268ecc.js",
+    "main.css": "/nft-minting-mockup/static/css/main.eb873bfb.css",
+    "main.js": "/nft-minting-mockup/static/js/main.6a6697c8.js",
     "static/media/splash-background.png": "/nft-minting-mockup/static/media/splash-background.aa8c98921160c56877d0.png",
     "static/media/Don_Croakleone.png": "/nft-minting-mockup/static/media/Don_Croakleone.47cd15e1a9786e8593f4.png",
     "static/media/logoplaceholder.png": "/nft-minting-mockup/static/media/logoplaceholder.0112b23cd9e59ee4c54e.png",
     "index.html": "/nft-minting-mockup/index.html",
-    "main.80c76cc7.css.map": "/nft-minting-mockup/static/css/main.80c76cc7.css.map",
-    "main.74268ecc.js.map": "/nft-minting-mockup/static/js/main.74268ecc.js.map"
+    "main.eb873bfb.css.map": "/nft-minting-mockup/static/css/main.eb873bfb.css.map",
+    "main.6a6697c8.js.map": "/nft-minting-mockup/static/js/main.6a6697c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.80c76cc7.css",
-    "static/js/main.74268ecc.js"
+    "static/css/main.eb873bfb.css",
+    "static/js/main.6a6697c8.js"
   ]
 }
