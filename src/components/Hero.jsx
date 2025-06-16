@@ -45,9 +45,9 @@ export default function Hero() {
               draggable="false"
             />
           </div>
-          <div className="nav__centered-header">
+          {/* <div className="nav__centered-header">
             <h1 className="nav__header">PONZICO</h1>
-          </div>
+          </div> */}
           <ul className="nav__links">
             <li>
               <a href="#about">Home</a>
