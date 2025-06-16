@@ -32,12 +32,12 @@ export default function Hero() {
 
   return (
     <>
-      {/* Floating Nav */}
       <nav
         className={`nav__floating ${showNav ? "nav__visible" : "nav__hidden"}`}
       >
         <div className="nav__row">
-          <div className="logo__img--wrapper">
+          {/* Left: Logo */}
+          <div className="nav__left">
             <img
               src={logo}
               alt="PONZICO Logo"
@@ -45,54 +45,63 @@ export default function Hero() {
               draggable="false"
             />
           </div>
-          {/* <div className="nav__centered-header">
-            <h1 className="nav__header">PONZICO</h1>
-          </div> */}
-          <ul className="nav__links">
+
+          {/* Center: Main Links */}
+          <ul className="nav__center">
             <li>
               <a href="#about">Home</a>
             </li>
             <li>
               <a href="#collection">Roadmap</a>
             </li>
-            <li>
-              <a href="#mint" className="nav__link--primary">
-                Connect Wallet
-              </a>
-            </li>
           </ul>
+
+          {/* Right: Wallet Button */}
+          <div className="nav__right">
+            <a href="#mint" className="nav__link--primary">
+              Connect Wallet
+            </a>
+          </div>
         </div>
       </nav>
 
       {/* Rain Effect */}
       <div className="rain-overlay">
-        {[...Array(50)].map((_, i) => (
-          <div
-            className="raindrop"
-            key={i}
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 1 + 0.4}s`,
-              opacity: Math.random() * 0.5 + 0.3,
-              height: `${Math.random() * 40 + 30}px`,
-            }}
-          ></div>
-        ))}
+        {[...Array(100)].map((_, i) => {
+          const thickness = Math.random() < 0.3 ? 3 : 1.5; // 30% chance to be thicker
+          return (
+            <div
+              className="raindrop"
+              key={i}
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDuration: `${Math.random() * 1.2 + 0.6}s`,
+                opacity: Math.random() * 0.5 + 0.5,
+                height: `${Math.random() * 50 + 40}px`,
+                width: `${thickness}px`,
+              }}
+            ></div>
+          );
+        })}
       </div>
 
       {/* Hero Section */}
       <section id="hero">
-        <div className="container">
-          <div
-            className="row"
-            style={{ flexDirection: "column", alignItems: "center" }}
-          >
-            <img src={nftImage} alt="Featured NFT" className="nft__featured" />
-            <h2 className="hero__header">PONZICO</h2>
-            <a href="#collection" className="cta-button">
-              MINT
-            </a>
-          </div>
+        {/* Left: NFT in bottom-left corner */}
+        <div className="nft__wrapper">
+          <img src={nftImage} alt="Featured NFT" className="nft__featured" />
+        </div>
+
+        {/* Right: Text Content */}
+        <div className="hero__text">
+          <h1 className="hero__header">PONZICO</h1>
+          <p className="hero__subtext">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eum
+            corrupti suscipit praesentium facere commodi.
+          </p>
+          <a href="#collection" className="cta-button">
+            MINT
+          </a>
         </div>
       </section>
     </>
