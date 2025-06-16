@@ -57,7 +57,7 @@ export default function Hero() {
             </li>
             <li>
               <a href="#mint" className="nav__link--primary">
-                MINT
+                Connect Wallet
               </a>
             </li>
           </ul>

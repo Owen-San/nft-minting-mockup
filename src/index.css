@@ -46,11 +46,11 @@ nav {
 
 .nav__floating {
   position: fixed;
-  top: 20px;
+  top: 0px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   padding: 1rem 2rem;
   border-radius: 12px;
   z-index: 100;
