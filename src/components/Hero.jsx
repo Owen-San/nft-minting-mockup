@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logoplaceholder.png";
+import logo from "../assets/logo.png";
 import nftImage from "../assets/Don_Croakleone.png";
 
 export default function Hero() {
@@ -49,10 +49,14 @@ export default function Hero() {
           {/* Center: Main Links */}
           <ul className="nav__center">
             <li>
-              <a href="#about">Home</a>
+              <a href="#about" className="nav__link">
+                Home
+              </a>
             </li>
             <li>
-              <a href="#collection">Roadmap</a>
+              <a href="#collection" className="nav__link">
+                Roadmap
+              </a>
             </li>
           </ul>
 

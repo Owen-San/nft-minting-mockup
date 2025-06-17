@@ -62,14 +62,6 @@ nav {
   transition: opacity 0.4s ease;
 }
 
-.nav__centered-header {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
 .nav__visible {
   opacity: 1;
   pointer-events: auto;
@@ -101,20 +93,24 @@ nav {
 
 .nav__link--primary {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: #bb86fc;
-  color: #121212;
-  border-radius: 24px;
-  font-weight: 600;
+  padding: 0.75rem 2rem;
+  background-color: black;
+  color: #ffd700;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.6), 0 0 10px rgba(255, 0, 0, 0.4),
+    0 0 20px rgba(255, 0, 0, 0.2);
 }
 
 .nav__link--primary:hover {
-  background-color: #985eff;
-  transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(152, 94, 255, 0.5);
+  transform: scale(1.05);
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.9), 0 0 15px rgba(255, 69, 0, 0.7),
+    0 0 30px rgba(255, 0, 0, 0.4);
 }
 
 .nav__links {
@@ -169,14 +165,15 @@ nav {
 }
 
 .nav__center li a {
-  color: #ffffff;
+  font-size: 24px;
+  color: rgb(255, 215, 0);
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .nav__center li a:hover {
-  color: #bb86fc;
+  color: #ffffff;
 }
 
 .nav__right {
@@ -207,7 +204,7 @@ nav {
 }
 
 .logo__img {
-  height: 112px;
+  height: 64px;
   width: auto;
   pointer-events: none;
   user-select: none;
@@ -284,7 +281,7 @@ nav {
 
 .hero__subtext {
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: #ccc;
 }
 
@@ -300,19 +297,39 @@ nav {
 
 .cta-button {
   display: inline-block;
-  padding: 0.75rem 2rem;
-  background-color: #bb86fc;
-  color: #121212;
-  border-radius: 8px;
-  font-weight: bold;
+  padding: 0.85rem 2.2rem;
+  background-color: black;
+  color: #ffd700;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  font-size: 1rem;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 12px rgba(187, 134, 252, 0.3);
+  box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.8), 0 0 10px rgba(255, 140, 0, 0.5),
+    0 0 20px rgba(255, 140, 0, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  animation: pulseGlow 3s ease-in-out infinite;
 }
 
 .cta-button:hover {
-  background-color: #985eff;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  box-shadow: 0 0 0 2px rgba(255, 140, 0, 1), 0 0 15px rgba(255, 165, 0, 0.7),
+    0 0 30px rgba(255, 69, 0, 0.5);
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px rgba(255, 69, 0, 0.8), 0 0 16px rgba(255, 140, 0, 0.6),
+      0 0 30px rgba(255, 140, 0, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.9), 0 0 24px rgba(255, 165, 0, 0.7),
+      0 0 40px rgba(255, 69, 0, 0.4);
+  }
 }
 
 .nft__wrapper {
