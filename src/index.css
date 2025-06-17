@@ -404,3 +404,62 @@ nav {
     transform: translateY(120vh);
   }
 }
+
+@media (max-width: 1024px) {
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+  }
+
+  .hero__text {
+    margin: 0 auto;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nft__wrapper {
+    position: static;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .nft__featured {
+    width: 400px;
+    max-width: 90%;
+  }
+
+  .nav__link--primary {
+    font-size: 14px;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nft__featured {
+    width: 400px;
+  }
+
+  .hero__text {
+    margin: 0 auto;
+  }
+
+  .nav__link--primary {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .nav__center {
+    display: none;
+  }
+
+  .nav__right {
+    position: absolute;
+    right: 30%;
+  }
+
+}
