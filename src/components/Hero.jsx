@@ -32,6 +32,7 @@ export default function Hero() {
 
   return (
     <>
+      {/* Nav */}
       <nav
         className={`nav__floating ${showNav ? "nav__visible" : "nav__hidden"}`}
       >
@@ -58,6 +59,11 @@ export default function Hero() {
                 Roadmap
               </a>
             </li>
+            <li>
+              <a href="#collection" className="nav__link">
+                Collection
+              </a>
+            </li>
           </ul>
 
           {/* Right: Wallet Button */}
@@ -72,7 +78,7 @@ export default function Hero() {
       {/* Rain Effect */}
       <div className="rain-overlay">
         {[...Array(100)].map((_, i) => {
-          const thickness = Math.random() < 0.3 ? 3 : 1.5; // 30% chance to be thicker
+          const thickness = Math.random() < 0.3 ? 3 : 1.5;
           return (
             <div
               className="raindrop"
@@ -91,21 +97,28 @@ export default function Hero() {
 
       {/* Hero Section */}
       <section id="hero">
-        {/* Left: NFT in bottom-left corner */}
-        <div className="nft__wrapper">
-          <img src={nftImage} alt="Featured NFT" className="nft__featured" />
-        </div>
+        <div className="hero__content-row">
+          {/* Left: NFT */}
+          <div className="nft__wrapper">
+            <img src={nftImage} alt="Featured NFT" className="nft__featured" />
+          </div>
 
-        {/* Right: Text Content */}
-        <div className="hero__text">
-          <h1 className="hero__header">PONZICO</h1>
-          <p className="hero__subtext">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eum
-            corrupti suscipit praesentium facere commodi.
-          </p>
-          <a href="#collection" className="cta-button">
-            MINT
-          </a>
+          {/* Right: Text Content */}
+          <div className="hero__text">
+            <div className="hero__content">
+              <h1 className="hero__header">PONZICO</h1>
+              <p className="hero__subtext">
+                WELCOME TO PONZICO Brick by brick. Layer by layer. A shadowy
+                syndicate. A legendary frog. A DAO-powered Ponzi machine.
+                PONZICO is a lore-driven, onchain operation led by the elusive
+                Don Croakleon — building an empire from memes, mystique, and
+                well-coordinated chaos.
+              </p>
+              <a href="#collection" className="cta-button">
+                Roadmap
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </>

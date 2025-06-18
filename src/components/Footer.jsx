@@ -6,7 +6,7 @@ export default function Footer() {
       <footer className="footer">
         <div className="footer__content">
           <p>&copy; {new Date().getFullYear()} PONZICO. All rights reserved.</p>
-          <ul className="footer__links">
+          {/* <ul className="footer__links">
             <li>
               <a href="#about">About</a>
             </li>
@@ -19,7 +19,7 @@ export default function Footer() {
             <li>
               <a href="#contact">Contact</a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </footer>
     </>
