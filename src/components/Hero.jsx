@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import logo from "../assets/logo.png";
 import nftImage from "../assets/Don_Croakleone.png";
+import RoadmapModal from "./RoadmapModal";
 
 export default function Hero() {
   const [showNav, setShowNav] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
@@ -32,12 +34,12 @@ export default function Hero() {
 
   return (
     <>
-      {/* Nav */}
+      {/* Floating Nav */}
       <nav
         className={`nav__floating ${showNav ? "nav__visible" : "nav__hidden"}`}
       >
         <div className="nav__row">
-          {/* Left: Logo */}
+          {/* Logo */}
           <div className="nav__left">
             <img
               src={logo}
@@ -47,7 +49,7 @@ export default function Hero() {
             />
           </div>
 
-          {/* Center: Main Links */}
+          {/* Center Navigation */}
           <ul className="nav__center">
             <li>
               <a href="#about" className="nav__link">
@@ -55,7 +57,11 @@ export default function Hero() {
               </a>
             </li>
             <li>
-              <a href="#collection" className="nav__link">
+              <a
+                onClick={() => setIsModalOpen(true)}
+                className="nav__link"
+                style={{ cursor: "pointer" }}
+              >
                 Roadmap
               </a>
             </li>
@@ -66,7 +72,7 @@ export default function Hero() {
             </li>
           </ul>
 
-          {/* Right: Wallet Button */}
+          {/* Connect Button */}
           <div className="nav__right">
             <a href="#mint" className="nav__link--primary">
               Connect Wallet
@@ -98,29 +104,39 @@ export default function Hero() {
       {/* Hero Section */}
       <section id="hero">
         <div className="hero__content-row">
-          {/* Left: NFT */}
+          {/* Left: NFT Visual */}
           <div className="nft__wrapper">
             <img src={nftImage} alt="Featured NFT" className="nft__featured" />
           </div>
 
-          {/* Right: Text Content */}
+          {/* Right: Hero Text */}
           <div className="hero__text">
             <div className="hero__content">
               <h1 className="hero__header">PONZICO</h1>
               <p className="hero__subtext">
-                WELCOME TO PONZICO Brick by brick. Layer by layer. A shadowy
+                WELCOME TO PONZICO. Brick by brick. Layer by layer. A shadowy
                 syndicate. A legendary frog. A DAO-powered Ponzi machine.
                 PONZICO is a lore-driven, onchain operation led by the elusive
-                Don Croakleon — building an empire from memes, mystique, and
+                Don Croakleone — building an empire from memes, mystique, and
                 well-coordinated chaos.
               </p>
-              <a href="#collection" className="cta-button">
+              <a
+                onClick={() => setIsModalOpen(true)}
+                className="cta-button"
+                style={{ cursor: "pointer" }}
+              >
                 Roadmap
               </a>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Roadmap Modal */}
+      <RoadmapModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 }

@@ -336,12 +336,18 @@ nav {
   position: relative;
   overflow: hidden;
   animation: pulseGlow 3s ease-in-out infinite;
+  user-select: none;
+  cursor: pointer;
 }
 
 .cta-button:hover {
   transform: scale(1.08);
   box-shadow: 0 0 0 2px rgba(255, 140, 0, 1), 0 0 15px rgba(255, 165, 0, 0.7),
     0 0 30px rgba(255, 69, 0, 0.5);
+}
+
+.cta-button:active {
+  transform: scale(0.96);
 }
 
 @keyframes pulseGlow {
@@ -505,5 +511,3 @@ nav {
     padding: 8px;
   }
 }
-
-
