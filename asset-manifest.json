@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nft-minting-mockup/static/css/main.7321e3b7.css",
+    "main.css": "/nft-minting-mockup/static/css/main.6379648a.css",
     "main.js": "/nft-minting-mockup/static/js/main.e1556dc2.js",
     "static/media/splash-background.png": "/nft-minting-mockup/static/media/splash-background.aa8c98921160c56877d0.png",
     "static/media/Don_Croakleone.png": "/nft-minting-mockup/static/media/Don_Croakleone.47cd15e1a9786e8593f4.png",
     "index.html": "/nft-minting-mockup/index.html",
-    "main.7321e3b7.css.map": "/nft-minting-mockup/static/css/main.7321e3b7.css.map",
+    "main.6379648a.css.map": "/nft-minting-mockup/static/css/main.6379648a.css.map",
     "main.e1556dc2.js.map": "/nft-minting-mockup/static/js/main.e1556dc2.js.map"
   },
   "entrypoints": [
-    "static/css/main.7321e3b7.css",
+    "static/css/main.6379648a.css",
     "static/js/main.e1556dc2.js"
   ]
 }
