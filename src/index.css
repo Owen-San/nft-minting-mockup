@@ -12,13 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background-color: #121212;
-}
-
 body,
 html {
   overflow-x: hidden;
+  background-color: #121212;
 }
 
 h1,
@@ -35,8 +32,7 @@ p {
   box-sizing: border-box;
 }
 
-/* NAV */
-
+/* NAVIGATION */
 nav {
   margin: 0 auto;
   width: 100%;
@@ -240,10 +236,9 @@ nav {
 #hero {
   position: relative;
   height: 100vh;
-  background-image: url("./assets/splash-background.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("./assets/splash-background.png") no-repeat 10% center;
+  background-size: 130%;
+  background-position: 8% center;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -258,15 +253,14 @@ nav {
   width: 100%;
   max-width: 1400px;
   z-index: 5;
-  gap: 1rem;
 }
 
 .nft__wrapper {
-  padding-top: 100px;
   flex: 1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-top: 100px;
 }
 
 .nft__featured {
@@ -296,6 +290,7 @@ nav {
   max-width: 600px;
   text-align: center;
   padding-left: 1rem;
+  line-height: 2.2em;
 }
 
 .hero__content {
@@ -310,7 +305,7 @@ nav {
 
 .hero__header {
   font-size: 3rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero__subtext {
@@ -365,7 +360,7 @@ nav {
 /* FOOTER */
 
 .footer {
-  background-color: #000000;
+  background-color: #000;
   color: #b0b0b0;
   padding: 2rem 1rem;
   text-align: center;
@@ -382,7 +377,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 1rem 0 0;
+  padding-top: 1rem;
 }
 
 .footer__links a {
@@ -396,6 +391,7 @@ nav {
 }
 
 /* RAIN EFFECT */
+
 .rain-overlay {
   position: absolute;
   top: 0;
@@ -428,6 +424,10 @@ nav {
     align-items: center;
     padding: 2rem 1rem;
     text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
 
   .hero__content-row {
@@ -439,6 +439,7 @@ nav {
 
   .hero__content {
     margin-top: 18px;
+    height: 350px;
   }
 
   .hero__text {
@@ -448,7 +449,6 @@ nav {
 
   .nft__wrapper {
     padding: 0;
-    margin: 0 !important;
     position: static;
     margin-top: 2rem;
     text-align: center;
@@ -458,8 +458,9 @@ nav {
   }
 
   .nft__featured {
-    width: 350px;
+    width: 325px;
     max-width: 90%;
+    margin-top: 25px;
   }
 
   .nav__link--primary {
@@ -469,6 +470,13 @@ nav {
 }
 
 @media (max-width: 768px) {
+  #hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
   .nft__featured {
     width: 360px;
   }
@@ -489,6 +497,17 @@ nav {
 }
 
 @media (max-width: 480px) {
+  #hero {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .hero__subtext {
+    margin-bottom: 24px;
+  }
+
   .nav__center {
     display: none;
   }
@@ -508,6 +527,58 @@ nav {
   }
 
   .hero__content {
-    padding: 8px;
+    padding: 18px;
+    height: 380px;
+  }
+
+  .cta-button {
+    margin-top: 32px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .nav__row {
+    height: 100px;
+  }
+
+  #hero {
+    background-size: 110%;
+    background-position: 0% center;
+    background-repeat: no-repeat;
+  }
+
+  .hero__content-row {
+    max-width: 1800px;
+    gap: 2rem;
+  }
+
+  .nft__featured {
+    max-width: 900px;
+    position: absolute;
+    bottom: 9%;
+    left: 10%;
+  }
+
+  .hero__text {
+    max-width: 800px;
+    padding-left: 1rem;
+  }
+
+  .hero__content {
+    max-width: 750px;
+    padding: 5rem;
+  }
+
+  .hero__header {
+    font-size: 3.5rem;
+  }
+
+  .hero__subtext {
+    font-size: 1.4rem;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 1rem 2.6rem;
   }
 }
