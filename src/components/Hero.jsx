@@ -1,45 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../assets/logo.png";
 import nftImage from "../assets/Don_Croakleone.png";
 import RoadmapModal from "./RoadmapModal";
 
 export default function Hero() {
-  const [showNav, setShowNav] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-
-    const handleScroll = () => {
-      const footer = document.querySelector("footer");
-      const footerTop = footer?.getBoundingClientRect().top || Infinity;
-
-      const scrollingDown = window.scrollY > lastScrollY;
-      const nearFooter = footerTop < window.innerHeight;
-
-      if (window.scrollY === 0) {
-        setShowNav(true);
-      } else if (scrollingDown && nearFooter) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-
-      lastScrollY = window.scrollY;
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <>
-      {/* Floating Nav */}
-      <nav
-        className={`nav__floating ${showNav ? "nav__visible" : "nav__hidden"}`}
-      >
+      {/* Logo */}
+      <nav className="nav__floating">
         <div className="nav__row">
-          {/* Logo */}
           <div className="nav__left">
             <img
               src={logo}
@@ -47,36 +18,6 @@ export default function Hero() {
               className="logo__img"
               draggable="false"
             />
-          </div>
-
-          {/* Center Navigation */}
-          <ul className="nav__center">
-            <li>
-              <a href="#about" className="nav__link">
-                Home
-              </a>
-            </li>
-            <li>
-              <a
-                onClick={() => setIsModalOpen(true)}
-                className="nav__link"
-                style={{ cursor: "pointer" }}
-              >
-                Roadmap
-              </a>
-            </li>
-            <li>
-              <a href="#collection" className="nav__link">
-                Collection
-              </a>
-            </li>
-          </ul>
-
-          {/* Connect Button */}
-          <div className="nav__right">
-            <a href="#mint" className="nav__link--primary">
-              Connect Wallet
-            </a>
           </div>
         </div>
       </nav>
@@ -104,12 +45,10 @@ export default function Hero() {
       {/* Hero Section */}
       <section id="hero">
         <div className="hero__content-row">
-          {/* Left: NFT Visual */}
           <div className="nft__wrapper">
             <img src={nftImage} alt="Featured NFT" className="nft__featured" />
           </div>
 
-          {/* Right: Hero Text */}
           <div className="hero__text">
             <div className="hero__content">
               <h1 className="hero__header">PONZICO</h1>
