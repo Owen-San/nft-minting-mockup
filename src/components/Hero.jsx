@@ -64,7 +64,7 @@ export default function Hero() {
                 className="cta-button"
                 style={{ cursor: "pointer" }}
               >
-                Roadmap
+                MINT
               </a>
             </div>
           </div>
