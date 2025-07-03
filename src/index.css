@@ -349,6 +349,12 @@ nav {
 }
 
 @media (max-width: 980px) {
+  #hero {
+    background-size: 150% auto !important; /* or try 160% if you still see gray */
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
   .hero__content {
     max-width: 90%;
     padding: 1.5rem;
@@ -393,6 +399,12 @@ nav {
 }
 
 @media (max-width: 768px) {
+  #hero {
+    background-size: 220% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
   .hero__content {
     max-width: 90%;
     padding: 1.2rem;
@@ -445,6 +457,12 @@ nav {
 }
 
 @media (max-width: 480px) {
+  #hero {
+    background-size: 250% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+  }
+
   .hero__content {
     max-width: 90%;
     padding: 1rem;
