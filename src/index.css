@@ -555,3 +555,18 @@ nav {
     padding: 1rem 2.6rem;
   }
 }
+
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  #hero {
+    height: 100dvh;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  #hero::before,
+  #hero::after {
+    display: none;
+  }
+}
