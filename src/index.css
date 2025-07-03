@@ -403,6 +403,7 @@ nav {
     background-size: 220% auto !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    background-position: center center;
   }
 
   .hero__content {
@@ -461,6 +462,9 @@ nav {
     background-size: 250% auto !important;
     background-position: center center !important;
     background-repeat: no-repeat !important;
+    height: 100dvh;
+    background-size: cover;
+    background-position: center center;
   }
 
   .hero__content {
@@ -553,20 +557,5 @@ nav {
   .cta-button {
     font-size: 1.1rem;
     padding: 1rem 2.6rem;
-  }
-}
-
-
-/* MOBILE FIX */
-@media (max-width: 768px) {
-  #hero {
-    height: 100dvh;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  #hero::before,
-  #hero::after {
-    display: none;
   }
 }
